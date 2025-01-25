@@ -40,9 +40,30 @@ main li{
     margin-left: 12%;
     margin-right: 10%;
 }
-.logo{
+#bluelogo{
     display: block;
     width: 135px;
     margin: 40px auto 50px auto;
-
+}
+#logo{
+    display: block;
+    width: 135px;
+    margin: 40px auto 50px auto;
+}
+/* .dark{
+    background-color: #333;
+    }
+.dark h2{
+    color: #006EB6;
+} */
+/* .dark h1, .dark p, .dark ol, .dark li {
+    color: white; */
+/* } */
+body[data-theme="dark_mode"]{
+    background-color: #333;
+    color: white;
+}
+body[data-theme="light_mode"]{
+    background-color: #ffffff;
+    color: #000000;
 }
