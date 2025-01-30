@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica, sans-serif;
+--secondary-font: "Mooli", sans-serif;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+header{
+    background-color: var(--primary-color); 
+    padding: 20px;
+
+}
+h1 {
+    margin: 0 auto;
+    color: var(--text-light);
+    font-family:var(--secondary-font);
+    font-size: 2em;
+
+}
+h2{
+    color: var(--text-dark);
+    font-family: var(--secondary-font);
+}
+nav{
+    display: flex;
+    justify-content:space-evenly;
+    font-family: var(--primary-font);
+    margin: 0 100px;
+    }
+    button{
+        border: none;
+        background-color: #52489c;
+        color: var(--text-light);
+        font-size: 1.2em;
+        font-family: var(--primary-font);
+    }
+a{
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.gallery{
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    place-items: center;
+}
+#grid-pic{
+    display: flex;
+}
+img {
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: var(--text-light) 10px solid;
+    box-shadow: 5px 5px 10px #333;
+}
+footer{
+    font-family: var(--primary-font);
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+footer p{
+    background-color: var(--primary-color); 
+    margin: 0 auto;
+    /* margin-left: 20%; */
+
+}
+
+/* Responsive design */
+  @media screen and (min-width: 1001px) {
+    button{
+        display: none;
+    }
+  }
+@media screen and (max-width: 1000px) {
+    .gallery {
+        display: grid;
+      grid-template-columns: auto auto;
+      margin: 10px 50px;
+      padding: 0;
+    }
+    nav a {
+        display: none;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .gallery {
+        display: grid;
+      grid-template-columns: auto;
+      margin: 10px 50px;
+      padding: 0;
+    }
+  }
