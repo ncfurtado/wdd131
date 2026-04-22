@@ -1,0 +1,41 @@
+body {
+  background-color: #ddd;
+}
+#content {
+  max-width: 60%;
+  border: 2px solid darkgrey;
+  margin: 40px auto;
+  padding: 50px;
+}
+p {
+  color: #035f9c;
+  font-size: 1.3em;
+}
+hr {
+  height: 3px;
+  width: 80%;
+  background-color: #035f9c;
+}
+h1,
+h2,
+p {
+  text-align: center;
+  margin-top: 5opx;
+}
+/* #logos{
+  text-align: center;
+  width: 50%;
+} */
+img {
+  width: 50%;
+  display: block;
+  margin: 50px auto;
+}
+#topics {
+  line-height: 1.5em;
+  margin: 0 auto;
+  width: 60%;
+}
+.list {
+  list-style-type: none;
+}
