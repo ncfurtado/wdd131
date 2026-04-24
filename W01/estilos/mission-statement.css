@@ -1,0 +1,37 @@
+body {
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+#content {
+  max-width: 60%;
+  border: 2px solid darkgrey;
+  margin: 40px auto;
+  padding: 50px;
+}
+img {
+  width: 25%;
+  display: block;
+  margin: 50px auto;
+}
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+h2 {
+  color: #3469a9;
+  text-align: center;
+}
+p {
+  font-size: 1.3em;
+  margin-top: 50px;
+  text-align: left;
+}
+hr {
+  height: 0.5px;
+  background-color: #035f9c;
+}
+
+li {
+  font-size: 1.3em;
+  line-height: 2em;
+}
