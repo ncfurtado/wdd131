@@ -1,12 +1,14 @@
 body {
   background-color: #ffffff;
   margin: 0 auto;
+  max-width: 1000px;
 }
 #content {
   max-width: 60%;
-  border: 2px solid darkgrey;
+  border: 1px solid #b4b4b4;
   margin: 40px auto;
-  padding: 50px;
+  padding: 70px;
+  line-height: 2em;
 }
 img {
   width: 25%;
@@ -14,24 +16,35 @@ img {
   margin: 50px auto;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
+  letter-spacing: 5px;
+  font-weight: inherit;
 }
 h2 {
+  font-size: 1.3em;
   color: #3469a9;
   text-align: center;
+  border-bottom: 1px solid #b4b4b4;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+#mission-statement-p {
+  padding-top: 30px;
 }
 p {
   font-size: 1.3em;
-  margin-top: 50px;
+  margin-top: 15px;
   text-align: left;
 }
 hr {
-  height: 0.5px;
-  background-color: #035f9c;
+  height: 65px;
+  /* color: #b4b4b4; */
+  background-color: #b4b4b4;
+  border-color: #b4b4b4;
 }
 
 li {
   font-size: 1.3em;
-  line-height: 2em;
+  padding-bottom: 15px;
 }
