@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="dom-theme.css">
+    <script src="dom-theme.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pick a Theme</h1>
+        <select id="theme-select">
+            <option value="">-- Select a Theme --</option>
+            <option value="ocean">Ocean</option>
+            <option value="forest">Forest</option>
+            <option value="desert">Desert</option>
+        </select>
+        <div class="content">
+            <p>Try switching themes to change the page's look!</p>
+        </div>
+        <img id="logo" src=" https://wddbyui.github.io/wdd131/images/wdd131.png" alt="WDD131 Dynamic Web Logo">
+    </div>
+    <script>
+        // 3 Steps of Computational Thinking:
+
+        // Break the problem into smaller parts - 
+        // The user needs to be able to choose a theme. 
+        // Once they choose on the dropdown, the JS needs to change the theme. 
+        // Look for repeated or similar steps
+        // Make a list of steps
+
+        let selectedTheme = document.querySelector('#theme-select');
+        let bodyContent = document.querySelector('body');
+
+        selectedTheme.addEventListener('change', changeTheme);
+
+        function changeTheme() {
+            let currentSelection = selectedTheme.value;
+            if (currentSelection === 'ocean') {
+                document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/ocean.jpg')";
+                bodyContent.style.fontFamily = "Papyrus, fantasy";
+            }
+            else if (currentSelection === 'forest') {
+                document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg"
+                bodyContent.style.fontFamily = "Impact, sans-serif";
+            }
+            else if (currentSelection === 'desert') {
+                document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
+                bodyContent.style.fontFamily = "'Big Caslon', serif";
+            }
+            else {
+                document.body.style.backgroundImage = "none";
+                bodyContent.style.fontFamily = "Georgia, serif";
+            }
+        }
+    </script>
+</body>
+
+</html>
