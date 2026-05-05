@@ -46,27 +46,42 @@ nav a:hover {
 footer {
   text-align: center;
 }
-@media screen and (min-width: 685px) and (max-width: 799px) {
+@media screen and (min-width: 600px) and (max-width: 799px) {
   main {
     display: flex;
     flex-wrap: wrap;
   }
+  .menu-btn {
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+  nav a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   section {
-    min-width: 150px;
-    max-width: 250px;
+    width: 35%;
   }
 }
 @media screen and (min-width: 800px) {
   main {
     display: flex;
   }
-  .menu-btn{
+  .menu-btn {
     display: none;
   }
   nav {
-    display: block;
+    display: flex;
+  }
+  nav a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   section {
-    min-width: 170px;
+    width: 30%;
   }
 }
