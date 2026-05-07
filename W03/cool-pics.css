@@ -1,0 +1,71 @@
+/* Import a normalize CSS file, or write normal code. */
+
+* {
+  margin: 0;
+}
+header {
+  background-color: #2a81e2;
+  text-align: center;
+}
+h1 {
+  font-size: 2em;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.menu-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin: 5px 0;
+}
+h1,
+p {
+  color: white;
+}
+main {
+  background-color: darkgrey;
+  text-align: center;
+}
+h2 {
+  padding-top: 20px;
+  font-family: Calibri;
+  font-size: 1.75em;
+}
+
+img {
+  margin: 20px;
+  object-fit: cover;
+  width: 270px;
+  aspect-ratio: 1/1;
+  border: 5px solid white;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0.5);
+}
+footer {
+  background-color: #2a81e2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-btn {
+    display: none;
+  }
+  nav .gallery {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+  }
+}
