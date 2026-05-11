@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   font-size: 1.2em;
 }
+nav {
+  display: none;
+}
 nav a:hover {
   text-decoration: underline;
 }
@@ -22,6 +25,7 @@ nav a:hover {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  padding: 5px 0;
 }
 .bar1,
 .bar2,
@@ -38,6 +42,7 @@ p {
 main {
   background-color: darkgrey;
   text-align: center;
+  margin: 0 auto;
 }
 h2 {
   padding-top: 20px;
@@ -58,14 +63,33 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500) and (max-width: 949px) {
+  nav {
+    display: block;
+  }
   .menu-btn {
     display: none;
   }
-  nav .gallery {
+}
+
+@media screen and (min-width: 950px) {
+  nav {
+    display: block;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .gallery {
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-columns: 333px 333px 333px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px;
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+  }
+  .gallery img {
+    aspect-ratio: 1; /* keeps images square */
+    object-fit: cover; /* fills the cell without distortion */
   }
 }
