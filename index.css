@@ -3,24 +3,33 @@ body {
   margin: 0 auto;
   font-family: calibri;
 }
+h1, h2 {
+  font-size: 2.25em;
+}
 nav {
   display: block;
   background-color: darkgreen;
   color: white;
   margin: 0;
-  padding: 20px 0 20px 0;
+  padding: 10px 20px;
 }
 nav a {
   text-decoration: none;
   color: white;
   font-size: 1.3em;
-  padding: 20px;
+  padding: 10px 20px;
+}
+nav a:hover {
+  background-color: rgb(2, 179, 26);
 }
 main {
   padding: 0 30px;
 }
 table {
   background-color: darkgreen;
+  text-align: center;
+  width: 1200px;
+  margin: 20px auto;
 }
 th {
   color: white;
