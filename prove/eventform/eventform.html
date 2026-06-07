@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W07 Prove : Event Ticket</title>
+    <script defer src="eventform.js"></script>
+    <link rel="stylesheet" href="eventform.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon_io/favicon-16x16.png">
+</head>
+
+<body>
+    <main class="wrapper">
+        <h1>Event Ticket</h1>
+        <form id="ticketForm">
+            <div class="field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" required>
+            </div>
+
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required>
+            </div>
+
+            <div class="field full">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+            <div class="field">
+                <label for="ticketType">Type</label>
+                <select id="ticketType" name="ticketType" aria-controls="studentIdContainer" requiredautocomplete="off">
+                    <option value="">Choose one</option>
+                    <option value="student">Student</option>
+                    <option value="guest">Guest</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="availableDate">Event Date</label>
+                <input id="availableDate" name="availableDate" type="date" required>
+            </div>
+            <div class="field full" id="additional-insert">
+
+            </div>
+            <button class="full" type="submit">Create Ticket</button>
+            <section id="output" aria-live="polite"></section>
+
+        </form>
+
+</body>
+
+</html>
