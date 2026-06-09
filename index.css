@@ -3,7 +3,8 @@ body {
   margin: 0 auto;
   font-family: calibri;
 }
-h1, h2 {
+h1,
+h2 {
   font-size: 2.25em;
 }
 nav {
@@ -18,6 +19,7 @@ nav a {
   color: white;
   font-size: 1.3em;
   padding: 10px 20px;
+  border-radius: 5%;
 }
 nav a:hover {
   background-color: rgb(2, 179, 26);
@@ -30,15 +32,16 @@ table {
   text-align: center;
   width: 1200px;
   margin: 20px auto;
+  table-layout: fixed;
 }
 th {
   color: white;
   font-size: 1.8em;
-  column-span: 3;
 }
 td {
   background-color: rgb(2, 179, 26);
   padding: 10px;
+  max-width: 33.3%;
 }
 
 table a {
