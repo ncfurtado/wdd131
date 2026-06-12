@@ -8,7 +8,7 @@ function changeTheme() {
     let currentTheme = selectElement.value;
     if (currentTheme === "dark") {
         document.body.style.backgroundColor = "#333333";
-        logoImg.setAttribute('src', "../imagens/byui-logo-white.png");
+        logoImg.setAttribute('src', "../../images/byui-logo-white.png");
         logoImg.setAttribute('alt', "BYU-I logo in white");
         logoImg.style.width = "25%"
         document.body.style.color = "white";
@@ -16,7 +16,7 @@ function changeTheme() {
     }
     else {
         document.body.style.backgroundColor = 'white';
-        logoImg.setAttribute('src', "../imagens/byui-logo-blue.webp");
+        logoImg.setAttribute('src', "../../images/byui-logo-blue.webp");
         logoImg.setAttribute('alt', "BYU-I logo in blue");
         document.body.style.color = "black";
         h2.style.color = "#3469a9";
