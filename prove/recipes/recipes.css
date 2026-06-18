@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: mintcream;
+  margin: 0 auto;
+  font-family: "Amatic SC", sans-serif;
+}
+header {
+  display: flex;
+  font-size: 45px;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+header img {
+  max-height: 180px;
+}
+.svg {
+  max-width: 50px;
+}
+.search-bar {
+  width: 99%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 5%;
+  padding: 2px;
+}
+input {
+  width: 95%;
+  height: 20px;
+}
+.search-bar img {
+  max-height: 20px;
+}
+
+main {
+  border: 3px solid black;
+  border-radius: 10%;
+}
