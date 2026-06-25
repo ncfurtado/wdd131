@@ -36,6 +36,107 @@ function sortPeople(a, b) {
     else {return 0;}
 };
 
+
+// DOM references
+const hikeContainer = document.querySelector("#hike-container");
+const input = document.querySelector("#search");
+const searchButton = document.querySelector("#searchButton");
+
+// ---- templates ----
+function tagTemplate(tags) {
+  return tags.map(tag => `<button type="button">${tag}</button>`).join(" ");
+}
+
+function difficultyTemplate(rating) {
+  let html = `<span
+    class="rating"
+    role="img"
+    aria-label="Rating: ${rating} out of 5"
+  >  Difficulty: `;
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`;
+    } else {
+      html += `<span aria-hidden="true" class="icon-empty">▫️</span>`;
+    }
+  }
+  html += `</span>`;
+  return html;
+}
+
+function hikesTemplate(hike) {
+  return `<div class="hike-card">
+  <div class="hike-content">
+    <h2>${hike.name}</h2>
+    <p>${difficultyTemplate(hike.difficulty)}</p>
+    <p>${hike.description}</p>
+    <p>${hike.directions}</p>    
+    <div class="hike-tags">
+    ${tagTemplate(hike.tags)}
+    </div>
+  </div>
+</div>`;
+}
+
+function renderHike(hike) {
+  let html = hikesTemplate(hike);
+  hikeContainer.innerHTML += html;
+}
+
+// ---- sorting helper ----
+function sortDifficulty(a, b) {
+  if (a.difficulty > b.difficulty) {
+    return -1;
+  } else if (a.difficulty < b.difficulty) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+// ---- main search/filter/sort/render logic ----
+function search() {
+  const userInput = input.value.toLowerCase();
+
+  const filteredHikes = hikes.filter(hike => {
+    return (
+      hike.name.toLowerCase().includes(userInput) ||
+      hike.description.toLowerCase().includes(userInput) ||
+      hike.tags.find(tag => tag.toLowerCase().includes(userInput))
+    );
+  });
+
+  // sort the filtered results by difficulty
+  filteredHikes.sort(sortDifficulty);
+
+  // clear out any previous content
+  hikeContainer.innerHTML = "";
+
+  // output onto screen
+  filteredHikes.forEach(function (hike) {
+    renderHike(hike);
+  });
+}
+
+function handleEnter(event) {
+  if (event.key === "Enter") {
+    search();
+  }
+}
+
+searchButton.addEventListener("click", search);
+// for the enter key to work on search - not just clicking the search button
+input.addEventListener("keypress", handleEnter);
+
+// ---- show a random hike on page load ----
+function init() {
+  // clear out the static placeholder card from the HTML
+  hikeContainer.innerHTML = "";
+
+  const randomNum = Math.floor(Math.random() * hikes.length);
+  renderHike(hikes[randomNum]);
+}
+
 const hikes = [
   {
     name: "Bechler Falls",
@@ -107,104 +208,4 @@ const hikes = [
     trailhead: [43.78555, -111.98996]
   }
 ];
-
-// DOM references
-const hikeContainer = document.querySelector("#hike-container");
-const input = document.querySelector("#search");
-const searchButton = document.querySelector("#searchButton");
-
-// ---- templates ----
-function tagTemplate(tags) {
-  return tags.map(tag => `<button type="button">${tag}</button>`).join(" ");
-}
-
-function difficultyTemplate(rating) {
-  let html = `<span
-    class="rating"
-    role="img"
-    aria-label="Rating: ${rating} out of 5"
-  >  Difficulty: `;
-  for (let i = 1; i <= 5; i++) {
-    if (i <= rating) {
-      html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`;
-    } else {
-      html += `<span aria-hidden="true" class="icon-empty">▫️</span>`;
-    }
-  }
-  html += `</span>`;
-  return html;
-}
-
-function hikesTemplate(hike) {
-  return `<div class="hike-card">
-  <div class="hike-content">
-    <h2>${hike.name}</h2>
-    <div class="hike-tags">
-      ${tagTemplate(hike.tags)}
-    </div>
-    <p>${hike.description}</p>
-    <p>${difficultyTemplate(hike.difficulty)}</p>
-  </div>
-</div>`;
-}
-
-function renderHike(hike) {
-  let html = hikesTemplate(hike);
-  hikeContainer.innerHTML += html;
-}
-
-// ---- sorting helper ----
-function sortDifficulty(a, b) {
-  if (a.difficulty > b.difficulty) {
-    return -1;
-  } else if (a.difficulty < b.difficulty) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-
-// ---- main search/filter/sort/render logic ----
-function search() {
-  const userInput = input.value.toLowerCase();
-
-  const filteredHikes = hikes.filter(hike => {
-    return (
-      hike.name.toLowerCase().includes(userInput) ||
-      hike.description.toLowerCase().includes(userInput) ||
-      hike.tags.find(tag => tag.toLowerCase().includes(userInput))
-    );
-  });
-
-  // sort the filtered results by difficulty
-  filteredHikes.sort(sortDifficulty);
-
-  // clear out any previous content
-  hikeContainer.innerHTML = "";
-
-  // output onto screen
-  filteredHikes.forEach(function (hike) {
-    renderHike(hike);
-  });
-}
-
-function handleEnter(event) {
-  if (event.key === "Enter") {
-    search();
-  }
-}
-
-searchButton.addEventListener("click", search);
-// for the enter key to work on search - not just clicking the search button
-input.addEventListener("keypress", handleEnter);
-
-// ---- show a random hike on page load ----
-function init() {
-  // clear out the static placeholder card from the HTML
-  hikeContainer.innerHTML = "";
-
-  const randomNum = Math.floor(Math.random() * hikes.length);
-  renderHike(hikes[randomNum]);
-}
-
 init();
