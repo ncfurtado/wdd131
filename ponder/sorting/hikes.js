@@ -34,7 +34,44 @@ function sortPeople(a, b) {
     else if (a.name.toLowerCase() > b.name.toLowerCase()) {
         return 1;}
     else {return 0;}
-}
+};
+
+// this is the functionality for searching through the 
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", e => {
+  console.log("You clicked the button!");
+  
+  //filter array with the user's input
+  const userInput = document.getElementById("search").value.toLowerCase();
+  console.log(userInput);
+
+  hikes.filter(hike => {
+    return hike.name.toLowerCase().includes(userInput);
+  });
+  
+  const filteredHikes = hikes.filter(hike => {
+    return hike.name.toLowerCase().includes(userInput) ||
+           hike.description.toLowerCase().includes(userInput);
+  });
+
+  console.log(filteredHikes);
+
+  // Now we need to sort our results by hike difficulty
+
+  filteredHikes.sort(sortDifficulty)
+
+  function sortDifficulty(a, b) {
+    if (a.difficulty > b.difficulty) {
+      return -1}
+    else if (a.difficulty < b.difficulty) {
+      return 1
+    }  
+    else { return 0}
+
+  }
+});
+
+
 
 const hikes = [
   {
