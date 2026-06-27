@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 body {
   background-color: white;
   margin: 0 auto;
@@ -18,11 +17,8 @@ header img {
 h1 {
   font-family: "Amatic SC", sans-serif;
 }
-.svg {
-  max-width: 50px;
-}
 .search-bar {
-  width: 99%;
+  width: 100%;
   display: flex;
   gap: 5px;
   justify-content: center;
@@ -31,25 +27,48 @@ h1 {
   padding: 2px;
 }
 input {
-  width: 90%;
+  width: 95%;
   height: 40px;
   font-size: 20px;
   border: none;
   border-right: 2px lightgrey solid;
 }
 .search-bar img {
-  max-height: 40px;
+  max-height: 150px;
+}
+
+#searchButton {
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  float: right;
+  align-items: center;
+  cursor: pointer;
+  max-width: 10%;
+}
+#searchButton img {
+  max-width: 40px;
 }
 hr {
   margin: 15px 0;
   color: lightgrey;
 }
-main {
+#recipe-container {
   display: flex;
   flex-flow: column wrap;
   border: 3px solid black;
   box-sizing: border-box;
   border-radius: 10px;
+}
+.recipe-card {
+  display: flex;
+  flex-flow: column wrap;
+}
+.recipe-card:not(:last-child) {
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .recipe-img {
   margin: 20px auto 0px auto;
@@ -57,8 +76,7 @@ main {
 }
 .recipe-button {
   margin-top: 5px;
-  margin-left: 30px;
-  max-width: 100px;
+  margin-left: 10px;
   height: 40px;
   font-size: 25px;
   border-radius: 0;
@@ -90,10 +108,11 @@ footer {
   justify-content: center;
   gap: 3px;
 }
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
   body {
     max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 35px;
   }
   .search-bar {
     width: 99%;
@@ -105,38 +124,61 @@ footer {
     padding: 2px;
   }
   input {
-    width: 95%;
+    width: 97%;
     height: 40px;
     font-size: 20px;
     border: none;
     border-right: 2px lightgrey solid;
   }
   .search-bar img {
-    padding: 2px;
-    width: 5%;
+    padding: 5px 0px;
+    width: 75%;
   }
-  main {
+  #searchButton {
+    height: 40px;
+    max-width: 5%;
+  }
+  #searchButton img {
+    max-width: 1000px;
+    padding: 0;
+    margin: 0;
+  }
+  #recipe-container {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     min-width: none;
     padding: 25px;
+    gap: 25px;
+  }
+  .recipe-card {
+    display: flex;
+    flex-flow: row;
+  }
+  .recipe-card:not(:last-child) {
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 20px;
+    margin-bottom: 0;
   }
   .recipe-img {
     margin: 0;
-    max-width: 70%;
+    max-height: 500px;
+    max-width: 500px;
   }
   .info {
-    max-width: 25%;
+    max-width: 45%;
     display: flex;
     flex-flow: column;
+  }
+  .info-tags {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 10px;
   }
   .recipe-title {
     margin: 0;
     padding-top: 50px;
     padding-left: 20px;
   }
-  /* .recipe-button {
-  } */
   .recipe-title {
     font-size: 55px;
   }
@@ -154,8 +196,8 @@ footer {
   footer {
     display: flex;
     flex-flow: row-reverse wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px;
   }
 }
