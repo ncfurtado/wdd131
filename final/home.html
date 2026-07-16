@@ -18,47 +18,56 @@
 <body>
     <header>
 
-        <nav class="main-nav">
+        <nav>
+            <h1>GSE 101: Final Project </h1>
             <ul>
-                <h1>GSE 101: Final Project </h1>
                 <a href="../../index.html">Home Page</a>
-                <a href="survey.html">Take the Survey</a>
-                <!-- <a href="">Archive</a> -->
+                <a href="https://docs.google.com/forms/d/1dsPPXmilZwRBcFH763YHy0Spxu5CLWIvsPBwNBy_9to/edit"
+                    target="_blank">Take the Survey</a>
+                <a href="BYU-I_mental_health_resources.jpg">Sharables</a>
                 <!-- <a href="">Search</a> -->
                 <a href="https://github.com/ncfurtado/wdd131">Source Code</a>
             </ul>
         </nav>
     </header>
     <main>
-        <div>
-            <h2>The Problem</h2>
-            <p>I wanted to learn more about Mental Health Issues like Depression and Anxiety. My wife also has
-                depression
-                and I wanted to learn to recognize symptoms better and raise awareness with whatever I learned.</p>
+        <div class="infocard hypo" aria-label="">
+            <h2>Hypothesis</h2>
+            <h4>Hypothesis: Does a locally informed survey on anxiety and depression improve an audience's ability
+                to recognize symptoms and know where to seek help?</h4>
+            <ul>
+                <li>I wanted to learn more about Mental Health Issues like Depression and Anxiety. I know many
+                    people
+                    that have either disease
+                    and I wanted to learn to recognize symptoms better and raise awareness with whatever I learned.
+                </li>
+            </ul>
         </div>
-        <div>
+        <div class="infocard">
             <h2>Project Idea</h2>
             <ol>
                 <li>Gather online data on mental health statistics students in Idaho and nationwide.</li>
                 <li>Interview any professors or professions at BYU-I or in the Rexburg area.</li>
                 <li>Conduct a survey of students using the data to gauge students awareness</li>
-                <li>Create a website, infographics and a flyer to help other learn about the Counseling Center, etc.</li>
+                <li>Create a website, infographics and a flyer to help other learn about the Counseling Center, etc.
+                </li>
             </ol>
             <h4>Materials</h4>
-            <li>Time</li>
-            <li>Paper and Printer</li>
-            <li>A computer</li>
+            <ul id="materials">
+                <li>Time</li>
+                <li>Paper and Printer</li>
+                <li>A computer</li>
+            </ul>
         </div>
-        <div id="results">
-            <h2>Results!</h2>
+        <div class="infocard" id="results">
+            <h2>Results</h2>
             <ul>
                 <li>Interviewed Brother Hunt and Brother Elder</li>
                 <li>Gathered 20 useful figures and statistics</li>
                 <li>Almost 60 people weighed in on survey</li>
                 <li>Handed out 30 flyers and shared more in digital copies</li>
             </ul>
-            <table
-                >
+            <table>
                 <thead>
                     <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
                         <th>Statistic</th>
@@ -68,7 +77,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>    
+                    <tr>
                         <td>38% of US college students meet criteria for depression; 34% screen positive for anxiety;
                             76% report high/moderate stress in the past 30 days.</td>
                         <td>Healthy Minds Network. <em>Healthy Minds Study 2023–2024 Data Report</em>. Healthy Minds
@@ -134,30 +143,41 @@
                 </tbody>
             </table>
             <h2>Survey Results</h2>
-            <div id="gallery">
+            <div class="infocard" id="gallery">
                 <img src="images/q1.png" alt="">
                 <img src="images/q3.png" alt="">
                 <img src="images/q5.png" alt="">
                 <img src="images/q2.png" alt="">
             </div>
+            <p>Based on survey results and experience talking to people, I was able to teach people some facts I learned
+                and about resources they have access to (Conseling on campus, THRIVE, etc.)</p>
         </div>
-        <div id="nexttime">
+        <div class="infocard" id="nexttime">
             <h2>For Next Time</h2>
             <ul>
-                <li>Interview more people and get more relevant data</li>
-                <li>Create a Ted-talk style presentation to teach more people</li>
+                <li>Collaboration: partner with the Counseling Center to give them more valuable feedback and menthods
+                    to improve their outreach</li>
+                <li>Different structure: Have a different hypothesis and test it by creating a Ted-talk style
+                    presentation with quick surveys before and after</li>
+                <li>Hear more people's stories: talk to others about what helped them recognize when they needed help,
+                    then integrate their feedback into presentation, feedback, etc.</li>
+                <!-- <li>Hypothesis: Does a locally informed survey on anxiety and depression improve an audience's ability
+                    to recognize symptoms and know where to seek help?</li> -->
             </ul>
         </div>
-        <div id="connection">
+        <div class="infocard" id="connection">
             <h2>Gospel Connection</h2>
-            <h4>
-                Mosiah 18:9
-            </h4>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p9#p9">
+                <h4>Mosiah 18:9</h4>
+            </a>
             <p>
-                Yea, and are willing to mourn with those that mourn; yea, and comfort those that stand in
-                need
-                of comfort...</p>
-            <h4>Alma 7:11-12 </h4>
+                9 Yea, and are willing to mourn with those that mourn; yea, and comfort those that stand in need of
+                comfort, and to stand as witnesses of God at all times and in all things, and in all places that ye may
+                be in, even until death, that ye may be redeemed of God, and be numbered with those of the first
+                resurrection, that ye may have eternal life</p>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11">
+                <h4>Alma 7:11-12 </h4>
+            </a>
             <p>11 And he shall go forth, suffering pains and afflictions and temptations of every kind; and
                 this
                 that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his
@@ -170,31 +190,34 @@
                 he
                 may know according to the flesh how to succor his people according to their infirmities.</p>
         </div>
-        <div>
+        <div class="infocard">
             <h2>Sources</h2>
             <ul>
-                <li>The Book of Mormon</li>
-                <li></li>
-                <li>Healthy Minds Network, Healthy Minds Study (HMS) National Data Report (2023–2024).</li>
+                <li>Center for Collegiate Mental Health. 2025 Annual Report. Penn State Student Affairs, Jan. 2026,
+                    ccmh.psu.edu/assets/docs/CCMH%202025%20Annual%20Report.pdf.</li>
+                <li>Healthy Minds Network. Healthy Minds Study 2023–2024 Data Report. Healthy Minds Network, 2024.</li>
+                <li>American College Health Association. National College Health Assessment (NCHA III) Boise State
+                    University Campus Report. Boise State University Wellness Services, 2020.</li>
+                <li>UnitedHealthcare. Young Adult & College Student Behavioral Health Report. Business Wire, 2026.</li>
             </ul>
         </div>
         <hr>
-        <div class="slideshow-container">
-            <h4>Quick Quotes</h4>
-            <div id="slideshow">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <div class="dot-container">
-
-        </div>
-
-        <dialog>
-            <img>
-            <button class="viewer-closer">X</button>
-        </dialog>
     </main>
+    <div class="slideshow-container">
+        <h4>Quick Inspiration</h4>
+        <div id="slideshow">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+
+    </div>
+
+    <dialog>
+        <img>
+        <button class="viewer-closer">X</button>
+    </dialog>
     <footer>
         <p>If you or someone you know is in distress, call or text the Suicide & Crisis Lifeline at <a
                 href="tel:(1)(988)">

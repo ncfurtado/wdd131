@@ -32,6 +32,9 @@ footer {
   padding: 1.5rem 1rem;
   text-align: center;
 }
+footer p {
+  color: white;
+}
 
 footer {
   font-size: 0.95em;
@@ -41,27 +44,32 @@ footer a {
   color: var(--color-accent-light);
   font-weight: 600;
 }
-
+h1 {
+  margin: 0 auto;
+}
 nav {
   list-style-type: none;
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+  flex-flow: column;
+  /* justify-content: space-around; */
   align-items: center;
-  gap: 40px;
   flex-wrap: wrap;
-}
-
-.main-nav {
   list-style: none;
   padding: 0;
 }
-
-.main-nav li {
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+nav li {
   padding: 8px;
 }
 
-.main-nav a {
+nav a {
   color: var(--color-accent-light);
   text-decoration: none;
   font-weight: 500;
@@ -72,7 +80,7 @@ nav {
   padding-bottom: 2px;
 }
 
-.main-nav a:hover {
+nav a:hover {
   color: #ffffff;
   border-color: var(--color-accent-light);
 }
@@ -81,8 +89,9 @@ main {
   background-color: var(--color-bg);
 }
 
-main > div {
-  padding: 1.5rem 0;
+main div {
+  /* min-height: 700px; */
+  padding: 1.25rem 0;
   margin-bottom: 1rem;
 }
 
@@ -92,6 +101,7 @@ h3 {
   font-family: var(--font-heading);
   background-color: var(--color-dark);
   color: white;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -106,20 +116,42 @@ h2 {
   align-items: center;
   padding: 16px 0px;
   letter-spacing: 0.02em;
+  margin-bottom: 50px;
 }
-
+a h4 {
+  text-decoration: none;
+}
+a h4:hover {
+  background-color: var(--color-accent);
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
 h4 {
   font-family: var(--font-heading);
   color: var(--color-dark);
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
+  padding: 20px 50px;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  max-width: 300px;
 }
-
+.hypo h4 {
+  max-width: 1200px;
+}
 img {
   border: 3px solid var(--color-surface);
   border-radius: 8px;
   max-width: 500px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+#materials {
+  display: flex;
+  flex-flow: row;
 }
 #gallery {
   margin: 0 auto;
@@ -127,6 +159,7 @@ img {
 }
 table {
   margin: 20px 100px;
+  border: solid #333333 2px;
   margin-bottom: 100px;
 }
 th {
@@ -137,10 +170,6 @@ th {
   font-weight: bold;
   font-size: 1.5em;
   width: 45%;
-}
-table,
-td {
-  border: solid #333333 2px;
 }
 
 td {
@@ -155,13 +184,17 @@ td {
 }
 #connection {
   padding-bottom: 30px;
+  text-decoration: none;
 }
 #connection p {
-  padding: 20px 500px;
+  max-width: 85%;
+  padding: 20px;
 }
-#nexttime {
-  margin: 300px 0px;
+#connection a {
+  text-decoration: none;
 }
+/* #nexttime {
+s} */
 #nexttime ul {
   margin: 100px 20px;
 }
@@ -182,6 +215,10 @@ td {
   padding: 50px;
   text-align: center;
   animation: fadeIn 0.5s ease;
+  min-height: none;
+}
+.mySlides div {
+  min-height: none;
 }
 #source {
   font-size: 1.5em;
@@ -247,6 +284,7 @@ td {
   padding: 20px;
   background: var(--color-surface);
   border-top: 1px solid #eee;
+  min-height: none;
 }
 
 /* The dots/bullets/indicators */
@@ -300,7 +338,7 @@ dialog[open] {
 }
 
 dialog img {
-  max-width: 90vw;
+  max-width: 20vw;
   max-height: 85vh;
   width: auto;
   height: auto;
@@ -313,8 +351,8 @@ dialog img {
 
 .viewer-closer {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   padding: 3px 6px;
   font-size: 1.5em;
   border-radius: 50%;
@@ -338,7 +376,10 @@ dialog img {
   p {
     color: var(--color-text);
     font-size: 30px;
-    padding: 250px 200px;
+    padding: 25px 200px;
+  }
+  .infocard {
+    min-height: 700px;
   }
   ol {
     margin: 100px auto;
@@ -373,9 +414,11 @@ dialog img {
     margin-bottom: 24px;
     break-inside: avoid;
   }
+  dialog {
+    margin-bottom: 200px;
+  }
   dialog img {
     background-color: white;
-
     width: 90%;
     max-width: none;
     max-height: 85vh;
