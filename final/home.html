@@ -11,38 +11,196 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon_io/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="../../images/favicon_io/site.webmanifest">
-    <link rel="stylesheet" href="home.css">
-    <script defer src="home.js"></script>
+    <link rel="stylesheet" href="styles/home.css">
+    <script defer src="scripts/home.js"></script>
 </head>
-<header>
-    <nav class="main-nav">
-        <ul>
-            <h1>GSE 101: Final Project </h1>
-            <a href="../../index.html">Home Page</a>
-            <a href="survey.html">Take the Survey</a>
-            <a href="">Archive</a>
-            <a href="">Search</a>
-            <a href="https://github.com/ncfurtado/wdd131">Source Code</a>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div class="slideshow-container">
-        <h3>Quick Quotes</h3>
-        <div id="slideshow">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <div class="dot-container">
-
-    </div>
-</main>
-<footer>
-<p>If you or someone you know is in distress, call or text the Suicide & Crisis Lifeline at <a href="tel:(1)(988)"> 988 </a> (available 24/7, free, and confidential).</p>
-</footer>
 
 <body>
+    <header>
+
+        <nav class="main-nav">
+            <ul>
+                <h1>GSE 101: Final Project </h1>
+                <a href="../../index.html">Home Page</a>
+                <a href="survey.html">Take the Survey</a>
+                <!-- <a href="">Archive</a> -->
+                <!-- <a href="">Search</a> -->
+                <a href="https://github.com/ncfurtado/wdd131">Source Code</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>The Problem</h2>
+            <p>I wanted to learn more about Mental Health Issues like Depression and Anxiety. My wife also has
+                depression
+                and I wanted to learn to recognize symptoms better and raise awareness with whatever I learned.</p>
+        </div>
+        <div>
+            <h2>Project Idea</h2>
+            <ol>
+                <li>Gather online data on mental health statistics students in Idaho and nationwide.</li>
+                <li>Interview any professors or professions at BYU-I or in the Rexburg area.</li>
+                <li>Conduct a survey of students using the data to gauge students awareness</li>
+                <li>Create a website, infographics and a flyer to help other learn about the Counseling Center, etc.</li>
+            </ol>
+            <h4>Materials</h4>
+            <li>Time</li>
+            <li>Paper and Printer</li>
+            <li>A computer</li>
+        </div>
+        <div id="results">
+            <h2>Results!</h2>
+            <ul>
+                <li>Interviewed Brother Hunt and Brother Elder</li>
+                <li>Gathered 20 useful figures and statistics</li>
+                <li>Almost 60 people weighed in on survey</li>
+                <li>Handed out 30 flyers and shared more in digital copies</li>
+            </ul>
+            <table
+                >
+                <thead>
+                    <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                        <th>Statistic</th>
+                        <th style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 45%;">Source (MLA
+                            9th Edition)</th>
+                        <th style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 20%;">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <td>38% of US college students meet criteria for depression; 34% screen positive for anxiety;
+                            76% report high/moderate stress in the past 30 days.</td>
+                        <td>Healthy Minds Network. <em>Healthy Minds Study 2023–2024 Data Report</em>. Healthy Minds
+                            Network, 2024.</td>
+                        <td><a href="https://healthymindsnetwork.org/wp-content/uploads/2024/09/HMS_national_report_090924.pdf"
+                                target="_blank" style="color: #0066cc; text-decoration: none; font-weight: bold;">View
+                                Report</a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #fafafa;">
+                        <td>Idaho young adult rates (18–25) exceed national benchmarks: Serious Mental Illness (13.5%
+                            vs. 11.6%), Major Depressive Episodes (23.2% vs. 20.1%), and serious thoughts of suicide
+                            (16.6% vs. 13.6%).</td>
+                        <td>Substance Abuse and Mental Health Services Administration. <em>National Survey on Drug Use
+                                and Health 2021/2022</em>. Idaho Office of Drug Policy, 2024.</td>
+                        <td><a href="https://odp.idaho.gov/2024-needs-assessment-final/" target="_blank"
+                                style="color: #0066cc; text-decoration: none; font-weight: bold;">View Needs
+                                Assessment</a></td>
+                    </tr>
+                    <tr>
+                        <td>64% to 68.7% of rural college students experience moderate-to-severe loneliness compared to
+                            54% of suburban/urban peers.</td>
+                        <td>Assessing Rural Education Assets and Strengths. <em>AREAS National Survey Report 2025</em>.
+                            University of Idaho, 2025.</td>
+                        <td><a href="https://verso.uidaho.edu/view/pdfCoverPage?instCode=01ALLIANCE_UID&filePid=13347147530001851&download=true"
+                                target="_blank" style="color: #0066cc; text-decoration: none; font-weight: bold;">View
+                                Survey Results</a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #fafafa;">
+                        <td>52.5% of depressed youth in Idaho receive no mental health care whatsoever.</td>
+                        <td>Idaho Department of Health and Welfare. "Why Suicide is a Problem in Idaho." <em>Frontier
+                                Psychiatry</em>, 2023.</td>
+                        <td><a href="https://frontier.care/blog/why-suicide-problem-idaho" target="_blank"
+                                style="color: #0066cc; text-decoration: none; font-weight: bold;">View Article</a></td>
+                    </tr>
+                    <tr>
+                        <td>30.4% of Boise State University students have been diagnosed with an anxiety disorder; 25.2%
+                            have been diagnosed with a depressive disorder.</td>
+                        <td>American College Health Association. <em>National College Health Assessment (NCHA III) Boise
+                                State University Campus Report</em>. Boise State University Wellness Services, 2020.
+                        </td>
+                        <td><a href="https://www.boisestate.edu/wellness/wellness-facts-and-figures/" target="_blank"
+                                style="color: #0066cc; text-decoration: none; font-weight: bold;">View Campus Facts</a>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #fafafa;">
+                        <td>69.5% of Boise State undergraduates fall into the "high" or "very high" categories for
+                            psychological distress.</td>
+                        <td>Boise State University Kinesiology Department. <em>Undergraduate Student Stress &
+                                Resilience: Project Report</em>. Boise State University, 2020.</td>
+                        <td><a href="https://www.boisestate.edu/kinesiology/wp-content/uploads/sites/85/2020/05/Project-Report-Student-Stress-and-Resilience.pdf"
+                                target="_blank" style="color: #0066cc; text-decoration: none; font-weight: bold;">View
+                                Project Report</a></td>
+                    </tr>
+                    <tr>
+                        <td>Student Perception Gap: 69% of college students reported a past-year mental health struggle,
+                            compared to only 43% of parents who believed their child struggled.</td>
+                        <td>UnitedHealthcare. <em>Young Adult & College Student Behavioral Health Report</em>. Business
+                            Wire, 2026.</td>
+                        <td><a href="https://www.businesswire.com/news/home/20260428763190/en/New-Survey-Finds-Widespread-Mental-and-Behavioral-Health-Challenges-Among-Young-Adults-and-College-Students"
+                                target="_blank" style="color: #0066cc; text-decoration: none; font-weight: bold;">View
+                                Press Release</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Survey Results</h2>
+            <div id="gallery">
+                <img src="images/q1.png" alt="">
+                <img src="images/q3.png" alt="">
+                <img src="images/q5.png" alt="">
+                <img src="images/q2.png" alt="">
+            </div>
+        </div>
+        <div id="nexttime">
+            <h2>For Next Time</h2>
+            <ul>
+                <li>Interview more people and get more relevant data</li>
+                <li>Create a Ted-talk style presentation to teach more people</li>
+            </ul>
+        </div>
+        <div id="connection">
+            <h2>Gospel Connection</h2>
+            <h4>
+                Mosiah 18:9
+            </h4>
+            <p>
+                Yea, and are willing to mourn with those that mourn; yea, and comfort those that stand in
+                need
+                of comfort...</p>
+            <h4>Alma 7:11-12 </h4>
+            <p>11 And he shall go forth, suffering pains and afflictions and temptations of every kind; and
+                this
+                that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his
+                people.
+            </p>
+            <p>
+                12 And he will take upon him death, that he may loose the bands of death which bind his people; and he
+                will
+                take upon him their infirmities, that his bowels may be filled with mercy, according to the flesh, that
+                he
+                may know according to the flesh how to succor his people according to their infirmities.</p>
+        </div>
+        <div>
+            <h2>Sources</h2>
+            <ul>
+                <li>The Book of Mormon</li>
+                <li></li>
+                <li>Healthy Minds Network, Healthy Minds Study (HMS) National Data Report (2023–2024).</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="slideshow-container">
+            <h4>Quick Quotes</h4>
+            <div id="slideshow">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dot-container">
+
+        </div>
+
+        <dialog>
+            <img>
+            <button class="viewer-closer">X</button>
+        </dialog>
+    </main>
+    <footer>
+        <p>If you or someone you know is in distress, call or text the Suicide & Crisis Lifeline at <a
+                href="tel:(1)(988)">
+                988 </a> (available 24/7, free, and confidential).</p>
+    </footer>
+
 
 </body>
 

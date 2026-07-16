@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-dark: #2c3e3a;
+  --color-accent: #5b8c7f;
+  --color-accent-light: #a8c9be;
+  --color-text: #333333;
+  --color-muted: #6b6b6b;
+  --font-heading: "Lora", Georgia, serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+}
+
+* {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+header,
+footer {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+footer {
+  font-size: 0.95em;
+}
+
+footer a {
+  color: var(--color-accent-light);
+  font-weight: 600;
+}
+
+nav {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav li {
+  padding: 8px;
+}
+
+.main-nav a {
+  color: var(--color-accent-light);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+  padding-bottom: 2px;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+  border-color: var(--color-accent-light);
+}
+
+main {
+  background-color: var(--color-bg);
+}
+
+main > div {
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  background-color: var(--color-dark);
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+  letter-spacing: 0.02em;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  text-align: center;
+  font-size: 2em;
+}
+
+img {
+  border: 3px solid var(--color-surface);
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+#gallery {
+  margin: 0 auto;
+  max-width: 700px;
+}
+table {
+  margin: 20px 100px;
+  margin-bottom: 100px;
+}
+th {
+  background-color: var(--color-dark);
+  color: var(--color-bg);
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 45%;
+}
+table,
+td {
+  border: solid #333333 2px;
+}
+
+td {
+  font-size: 1.2em;
+}
+#gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+#connection {
+  padding-bottom: 30px;
+}
+#connection p {
+  padding: 20px 500px;
+}
+#nexttime {
+  margin: 300px 0px;
+}
+#nexttime ul {
+  margin: 100px 20px;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: var(--color-surface);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  overflow: hidden;
+}
+
+/* Slides */
+.mySlides {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+#source {
+  font-size: 1.5em;
+  padding: 20px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#text {
+  padding: 20px;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-dark);
+  font-size: 1.5em;
+  line-height: 1.7;
+  margin: 0 auto 1rem;
+}
+
+#year {
+  padding: 5px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: var(--color-surface);
+  border-top: 1px solid #eee;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: var(--color-accent-light);
+  border-radius: 50%;
+  display: inline-block;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--color-accent);
+  transform: scale(1.15);
+}
+hr {
+  margin: 40px 20px;
+}
+q {
+  font-style: italic;
+}
+
+#source {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+#year {
+  color: var(--color-muted);
+  font-size: 0.9em;
+}
+
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 30, 28, 0.85);
+  border: none;
+  padding: 0;
+}
+
+dialog[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+dialog img {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.viewer-closer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 3px 6px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: var(--color-dark);
+  background-color: white;
+  width: 2em;
+  height: 2em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewer-closer:hover {
+  background-color: var(--color-accent-light);
+}
+
+@media screen and (min-width: 700px) {
+  * {
+    max-width: 1900px;
+  }
+  p {
+    color: var(--color-text);
+    font-size: 30px;
+    padding: 250px 200px;
+  }
+  ol {
+    margin: 100px auto;
+  }
+  li {
+    color: var(--color-text);
+    font-size: 30px;
+    padding: 10px 0px;
+    margin: 0px 200px;
+  }
+  img {
+    min-width: auto;
+    max-height: 1000px;
+  }
+  .slideshow-container {
+    max-width: 1200px;
+  }
+  .menu-btn {
+    display: none;
+  }
+  #gallery {
+    column-count: 2;
+    column-gap: 24px;
+    max-width: 1700px;
+    padding: 40px 0px;
+  }
+
+  #gallery img {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    break-inside: avoid;
+  }
+  dialog img {
+    background-color: white;
+
+    width: 90%;
+    max-width: none;
+    max-height: 85vh;
+    object-fit: contain;
+    display: block;
+    margin: 0.5vh auto;
+    border: none;
+  }
+}
